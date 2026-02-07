@@ -79,7 +79,7 @@ const AddAddress = () => {
               type="text"
               placeholder="Street"
             />
-            <div>
+            <div className="grid grid-cols-2 gap-4">
               <InputField
                 handleChange={handleChange}
                 address={address}
@@ -87,7 +87,40 @@ const AddAddress = () => {
                 type="text"
                 placeholder="City"
               />
+              <InputField
+                handleChange={handleChange}
+                address={address}
+                name="state"
+                type="text"
+                placeholder="State"
+              />
             </div>
+            <div className="grid grid-cols-2 gap-4">
+              <InputField
+                handleChange={handleChange}
+                address={address}
+                name="zipcode"
+                type="number"
+                placeholder="Zip code"
+              />
+              <InputField
+                handleChange={handleChange}
+                address={address}
+                name="country"
+                type="text"
+                placeholder="Country"
+              />
+            </div>
+            <InputField
+              handleChange={handleChange}
+              address={address}
+              name="phone"
+              type="text"
+              placeholder="phone"
+            />
+            <button className="w-full mt-6 bg-primary text-white py-3 hover:bg-primary-dull transition cursor-pointer uppercase ">
+              Save Address
+            </button>
           </form>
         </div>
         <img

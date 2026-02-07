@@ -7,9 +7,9 @@ export const Appcontext = createContext();
 
 export const AppcontextProvider = ({ children }) => {
   const navigate = useNavigate();
-  const currency = import.meta.VITE_CURRENCY;
+  const currency = import.meta.env.VITE_CURRENCY;
   const [user, setuser] = useState(null);
-  const [isSeller, setisSeller] = useState(true);
+  const [isSeller, setisSeller] = useState(false);
   const [showUserLogin, setshowUserLogin] = useState(false);
   const [products, setproducts] = useState([]);
   const [cartItems, setCartItems] = useState({});
@@ -61,6 +61,7 @@ export const AppcontextProvider = ({ children }) => {
     }
     return totalCount;
   };
+  console.log(import.meta.env.VITE_CURRENCY);
 
   //get cart total Amount
   const getCartAmount = () => {

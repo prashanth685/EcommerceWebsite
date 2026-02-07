@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
         <div
           onClick={() =>
             navigate(
-              `/products/${product.category.toLowerCase()}/${product._id}`,
+              `/products/{product.category.toLowerCase()}/{product._id}`,
               scrollTo(0, 0),
             )
           }
@@ -51,9 +51,10 @@ const ProductCard = ({ product }) => {
             </div>
             <div className="flex items-end justify-between mt-3">
               <p className="md:text-xl text-base font-medium text-primary">
-                {currency}${product.offerPrice}{" "}
+                {currency}
+                {product.offerPrice}{" "}
                 <span className="text-gray-500/60 md:text-sm text-xs line-through">
-                  ${product.price}
+                  {product.price}
                 </span>
               </p>
               <div

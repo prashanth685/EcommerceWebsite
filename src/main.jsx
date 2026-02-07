@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { AppcontextProvider } from "./context/Appcontext.jsx";
+console.log("ENV:", import.meta.env);
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
