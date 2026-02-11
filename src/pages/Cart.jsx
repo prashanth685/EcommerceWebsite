@@ -138,7 +138,7 @@ const Cart = () => {
 
             <button
               onClick={() => removeFromCart(product._id)}
-              className="mx-auto"
+              className="mx-auto cursor-pointer "
             >
               <img src={assets.remove_icon} alt="remove" className="w-6 h-6" />
             </button>

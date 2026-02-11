@@ -61,7 +61,6 @@ export const AppcontextProvider = ({ children }) => {
     }
     return totalCount;
   };
-  console.log(import.meta.env.VITE_CURRENCY);
 
   //get cart total Amount
   const getCartAmount = () => {
