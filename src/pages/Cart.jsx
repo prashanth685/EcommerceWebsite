@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAppContext } from "../context/Appcontext";
 import { assets, dummyAddress } from "../assets/assets";
+import toast from "react-hot-toast";
 
 const Cart = () => {
   const [showAddress, setShowAddress] = useState(false);
@@ -51,7 +52,8 @@ const Cart = () => {
     }
 
     if (paymentOption === "COD") {
-      alert("Order placed successfully (COD)");
+      toast.success("Order placed successfully (COD)");
+      // alert("Order placed successfully (COD)");
     } else {
       navigate("/checkout");
     }

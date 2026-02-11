@@ -1,6 +1,6 @@
 import React from "react";
-import Mainbanner from "../components/mainbanner";
-import Catagories from "../components/catagories";
+import Mainbanner from "../components/Mainbanner";
+import Catagories from "../components/Catagories";
 import BestSeller from "../components/BestSeller";
 import BottomBanner from "../components/BottomBanner";
 import EmailSubscription from "../components/EmailSubscription";
@@ -14,7 +14,7 @@ const Home = () => {
         <BestSeller />
         <BottomBanner />
         <EmailSubscription />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

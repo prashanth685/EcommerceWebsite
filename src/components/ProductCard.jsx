@@ -16,17 +16,18 @@ const ProductCard = ({ product }) => {
     product && (
       <>
         <div
-          onClick={() =>
+          onClick={() => {
             navigate(
-              `/products/{product.category.toLowerCase()}/{product._id}`,
-              scrollTo(0, 0),
-            )
-          }
-          className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white min-w-56 max-w-56 w-full"
+              `/products/${product.category.toLowerCase()}/${product._id}`,
+            );
+            scrollTo(0, 0);
+          }}
+
+          // className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white min-w-56 max-w-56 w-full"
         >
-          <div className="group cursor-pointer flex items-center justify-center px-2">
+          <div className="border border-gray-500/20 rounded-md p-3 bg-white w-full gap-5.0">
             <img
-              className="group-hover:scale-105 transition max-w-26 md:max-w-36"
+              className="group-hover:scale-105 transition w-full max-h-32 object-contain"
               src={product.image[0]}
               alt={product.name}
             />
@@ -63,10 +64,10 @@ const ProductCard = ({ product }) => {
               >
                 {!cartItems[product._id] ? (
                   <button
-                    className="flex items-center justify-center gap-1 bg-primary border border-primary  rounded text-indigo-600 font-medium cursor-pointer w-1xl"
+                    className="flex items-center justify-center gap-1 bg-primary border border-primary  rounded text-indigo-600 font-medium cursor-pointer w-1xl text-center"
                     onClick={() => addToCart(product._id)}
                   >
-                    <img src={assets.cart_icon} alt="" />
+                    <img src={assets.cart_icon} alt="" className="" />
                     Add
                   </button>
                 ) : (

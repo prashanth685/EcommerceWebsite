@@ -6,20 +6,20 @@ const Login = () => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const { setUserLogin, setUser } = useAppContext();
+  const { setshowUserLogin, setuser } = useAppContext();
 
   const onSubmithandler = async (event) => {
     event.preventDefault();
-    setUser({
+    setshowUserLogin({
       email: "test@gmail.com",
       name: "test",
     });
-    setUserLogin(false);
+    setshowUserLogin(false);
   };
 
   return (
     <div
-      onClick={() => setUserLogin(false)}
+      onClick={() => setshowUserLogin(false)}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
     >
       <form
@@ -27,6 +27,13 @@ const Login = () => {
         onClick={(e) => e.stopPropagation()}
         className="relative z-50 flex flex-col gap-4 p-8 py-12 w-80 text-gray-500 rounded-lg shadow-xl border border-gray-200 bg-white"
       >
+        <button
+          type="button"
+          onClick={() => setshowUserLogin(false)}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl font-bold cursor-pointer"
+        >
+          &times;
+        </button>
         <p className="text-2xl font-medium text-center">
           <span className="text-primary">User</span>{" "}
           {state === "login" ? "Login" : "Sign Up"}
